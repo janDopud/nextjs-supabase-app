@@ -2,6 +2,9 @@ import { createClient } from '@/lib/supabase/server'
 import { Product } from '@/types/database'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 async function getProducts(): Promise<Product[]> {
   const supabase = await createClient()
   
